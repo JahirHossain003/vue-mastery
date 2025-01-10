@@ -19,15 +19,15 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div>
-    <h1>Event details</h1>
-    <div class="event-details" v-if="event">
-      <h2>{{ event.title }}</h2>
-      <p>{{ event.description }}</p>
-      <p>{{ event.date }}</p>
-      <p>{{ event.time }}</p>
-      <p>{{ event.location }}</p>
+  <div v-if="event">
+    <h1>Event {{ event.title }}</h1>
+    <div id="nav">
+      <RouterLink :to="{ name: 'event-details' }">Details </RouterLink>
+      <RouterLink :to="{ name: 'event-register' }">Register </RouterLink>
+      <RouterLink :to="{ name: 'event-edit' }">Edit</RouterLink>
     </div>
+    <br />
+    <router-view :event="event" />
   </div>
 </template>
 <style></style>
