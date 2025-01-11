@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '@/views/EventList.vue'
-import AboutView from '@/views/AboutView.vue'
+const AboutView = () => import(/* webpackChunkName: "about"*/ '@/views/AboutView.vue')
 import EventDetails from '@/views/Event/Details.vue'
 import EventLayout from '@/views/Event/Layout.vue'
 import EventRegister from '@/views/Event/Register.vue'
@@ -69,6 +69,13 @@ const router = createRouter({
       component: NetworkError,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 })
 
 export default router
