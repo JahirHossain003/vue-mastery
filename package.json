@@ -2,13 +2,12 @@
   "name": "real-world-vue",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "dev": "vite",
+    "format": "prettier --write src/",
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -20,11 +19,14 @@
     "@eslint/js": "^9.14.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-prettier": "^10.1.0",
     "eslint": "^9.14.0",
     "eslint-plugin-vue": "^9.30.0",
     "prettier": "^3.3.3",
+    "typescript": "~4.5.5",
     "vite": "^6.0.5",
     "vite-plugin-vue-devtools": "^7.6.8"
-  }
+  },
+  "type": "module"
 }
