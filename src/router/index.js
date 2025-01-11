@@ -7,6 +7,7 @@ import EventRegister from '@/views/Event/Register.vue'
 import EventEdit from '@/views/Event/Edit.vue'
 import NotFound from '@/views/NotFound.vue'
 import NetworkError from '@/views/NetworkError.vue'
+import TodoApp from '@/views/TodoAppView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -67,6 +68,11 @@ const router = createRouter({
       path: '/network-error',
       name: 'network-error',
       component: NetworkError,
+    },
+    {
+      path: '/todo',
+      name: 'todo-app',
+      component: TodoApp,
     },
   ],
   scrollBehavior(to, from, savedPosition) {
