@@ -4,13 +4,9 @@ defineProps(['event'])
 </script>
 <template>
   <div>
-    <h1>Event details</h1>
     <div class="event-details" v-if="event">
-      <h2>{{ event.title }}</h2>
+      <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
       <p>{{ event.description }}</p>
-      <p>{{ event.date }}</p>
-      <p>{{ event.time }}</p>
-      <p>{{ event.location }}</p>
     </div>
   </div>
 </template>

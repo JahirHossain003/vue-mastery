@@ -21,13 +21,25 @@ onMounted(() => {
 <template>
   <div v-if="event">
     <h1>Event {{ event.title }}</h1>
-    <div id="nav">
+    <nav>
       <RouterLink :to="{ name: 'event-details' }">Details </RouterLink>
       <RouterLink :to="{ name: 'event-register' }">Register </RouterLink>
       <RouterLink :to="{ name: 'event-edit' }">Edit</RouterLink>
-    </div>
+    </nav>
     <br />
     <router-view :event="event" />
   </div>
 </template>
-<style></style>
+<style scoped>
+nav {
+  padding: 30px;
+}
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-left: 10px;
+}
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
