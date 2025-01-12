@@ -1,10 +1,11 @@
-<script setup>
+<script lang="ts" setup>
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService'
+import { EventItem } from '@/types'
 import { computed, onMounted, ref, watchEffect } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 
-const events = ref(null)
+const events = ref<EventItem | []>([])
 const props = defineProps(['page'])
 const page = computed(() => props.page)
 const totalEvents = ref(0)

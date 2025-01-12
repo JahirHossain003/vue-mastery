@@ -1,6 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup>
-defineProps(['event'])
+<script lang="ts" setup>
+import { EventItem } from '@/types'
+import { PropType } from 'vue'
+defineProps({
+  event: {
+    type: {} as PropType<EventItem>,
+    required: true,
+  },
+})
 </script>
 <template>
   <div>
